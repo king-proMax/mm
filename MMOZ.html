@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>شركة معاذ علي - أهلاً بكم / Moaz Ali Company - Welcome</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+  :root {
+    --primary-color: #ff6f61;
+    --secondary-color: #4a90e2;
+    --accent-color: #ffd166;
+    --bg-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-radius: 12px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0 0 0.3rem 0;
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
+  }
+  header h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.7rem;
+    opacity: 0.9;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    margin: 0.5rem 0 0 0;
+  }
+
+  nav {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  nav button {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 700;
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  nav button.active,
+  nav button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1.8rem;
+  }
+
+  .portfolio-card {
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .portfolio-content {
+    padding: 1rem 1.2rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .portfolio-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .portfolio-description {
+    font-size: 1rem;
+    color: #555555;
+    flex-grow: 1;
+  }
+
+  /* About Section */
+  .about-text {
+    font-size: 1.1rem;
+    max-width: 720px;
+  }
+
+  /* Contact Section */
+  form {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+  }
+
+  form input,
+  form textarea {
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+  }
+
+  form textarea {
+    height: 120px;
+  }
+
+  form button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 0.8rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  form button:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .contact-info {
+    max-width: 480px;
+    margin: 2rem auto 0 auto;
+    background: var(--card-bg);
+    padding: 1.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    font-size: 1.1rem;
+    color: var(--text-color);
+  }
+
+  .contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  .contact-info p {
+    margin: 0.5rem 0;
+    word-break: break-word;
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    header h2 {
+      font-size: 1.4rem;
+    }
+    nav button {
+      margin: 0.3rem 0.3rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .portfolio-image {
+      height: 140px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>أهلاً بكم في</h1>
+    <h2>شركة معاذ علي</h2>
+    <p>Welcome to<br>Moaz Ali Company</p>
+    <nav>
+      <button class="filter-btn active" data-filter="all">الكل</button>
+      <button class="filter-btn" data-filter="web">مواقع إلكترونية</button>
+      <button class="filter-btn" data-filter="design">تصاميم</button>
+      <button class="filter-btn" data-filter="marketing">تسويق</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="portfolio">
+      <h2>أعمالي التجارية</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-card" data-category="web">
+          <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=400&q=80" alt="موقع إلكتروني 1" class="portfolio-image" />
+          <div class="portfolio-content">
+            <div class="portfolio-title">موقع إلكتروني للشركة أ</div>
+            <div class="portfolio-description">موقع إلكتروني مع تصميم حديث ومتجاوب يعرض خدمات الشركة.</div>
+          </div>
+        </div>
+        <div class="portfolio-card" data-category="design">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="تصميم 1" class="portfolio-image" />
+          <div class="portfolio-content">
+            <div class="portfolio-title">تصميم شعار ماركة ب</div>
+            <div class="portfolio-description">تصميم شعار فريد يعكس هوية العلامة التجارية بشكل جذاب.</div>
+          </div>
+        </div>
+        <div class="portfolio-card" data-category="marketing">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="تسويق 1" class="portfolio-image" />
+          <div class="portfolio-content">
+            <div class="portfolio-title">حملة تسويقية رقمية</div>
+            <div class="portfolio-description">إدارة حملة تسويقية ناجحة عبر وسائل التواصل الاجتماعي.</div>
+          </div>
+        </div>
+        <div class="portfolio-card" data-category="web">
+          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80" alt="موقع إلكتروني 2" class="portfolio-image" />
+          <div class="portfolio-content">
+            <div class="portfolio-title">موقع إلكتروني للمتجر ج</div>
+            <div class="portfolio-description">متجر إلكتروني متكامل مع نظام دفع آمن وتجربة مستخدم ممتازة.</div>
+          </div>
+        </div>
+        <div class="portfolio-card" data-category="design">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="تصميم 2" class="portfolio-image" />
+          <div class="portfolio-content">
+            <div class="portfolio-title">تصميم كتيب تعريفي</div>
+            <div class="portfolio-description">كتيب جذاب يبرز منتجات وخدمات الشركة.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>نبذة عني</h2>
+      <p class="about-text">
+        أنا محترف في تقديم حلول الأعمال الرقمية والتسويقية،
+        أتمتع بخبرة واسعة في تصميم وتطوير المواقع الإلكترونية،
+        وإعداد الحملات التسويقية الناجحة، وأعمل دائمًا على تقديم أعمال بجودة عالية تحقق رضا العملاء.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>تواصل معي</h2>
+      <form id="contact-form">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" placeholder="أدخل اسمك" required />
+
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required />
+
+        <label for="message">رسالتك</label>
+        <textarea id="message" name="message" placeholder="أكتب رسالتك هنا" required></textarea>
+
+        <button type="submit">إرسال</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>خدمات التواصل معي</h3>
+        <p>📞 رقم الهاتف والواتس: <a href="tel:+967772247719" style="color: var(--primary-color); text-decoration: none;">+967772247719</a></p>
+        <p>📧 البريد الإلكتروني: <a href="mailto:maeadh831@gmail.com" style="color: var(--primary-color); text-decoration: none;">maeadh831@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 جميع الحقوق محفوظة لشركة معاذ علي
+  </footer>
+
+  <script>
+    // Portfolio filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+        portfolioCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Contact form handling (frontend only)
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const message = contactForm.message.value.trim();
+
+      if (name && email && message) {
+        alert('شكرًا لتواصلك! سيتم الرد عليك قريبًا.');
+        contactForm.reset();
+      } else {
+        alert('يرجى ملء جميع الحقول بشكل صحيح.');
+      }
+    });
+  </script>
+</body>
+</html>
